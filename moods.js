@@ -7,16 +7,16 @@ Shift authorial voice based on keyphrases in the AI's output
 Customize the themes array to configure the moods of your           
 scenario. 
 
-name -       A string identifier. Will only be shown in script logs.
-message -    This will be shown to the player when the mood shifts.
-text -       Styles that will be placed in the A/N.
-matchers -   When the output matches these regexes, the score for
-             the corresponding mood increases.
-threshhold - When the score for a mood reaches the threshhold, 
-             the A/N will change to show the contents of 'text.'
-   
+name        A string identifier. Will only be shown in script logs.
+message     This will be shown to the player when the mood shifts.
+text        Styles that will be placed in the A/N.
+matchers    When the output matches these regexes, the score for
+            the corresponding theme increases.
+threshhold  When the score for a theme reaches the threshhold, 
+            the A/N will change to show the contents of 'text.'
+
 Use the property 'addendum' to specify text that should be
-included in the A/N regardless of the currently active mood.
+included in the A/N regardless of the currently active theme.
 
 Place the module into common scripts and then initialize in output.
 The initialize method should receive the name of the initial theme.
@@ -25,6 +25,12 @@ Example:
 
 MoodsModule.initialize('suspense')  
 MoodsModule.execute(text)
+
+Note that the themes and addendum below are only examples. You can
+add as many objects as you want to the themes array. Note also that
+at present, MoodsModule will replace the entire Author's Note rather
+than just the writing style. This behavior will need to be improved
+in the future.
 
 */
 
