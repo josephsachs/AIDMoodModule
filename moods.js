@@ -89,7 +89,7 @@ const MoodsModule = {
 			})
 			
 			this.setTheme(
-				state.themes.find((theme) => theme.name == initialTheme)  
+				this.themes.find((theme) => theme.name == initialTheme)  
 			)
 			
 			state.moodsInitialized = true
